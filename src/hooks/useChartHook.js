@@ -33,7 +33,7 @@ echarts.use([
 function useChartHook(chartRef, options) {
   let myChart = null;
 
-  function renderChart() {
+  const renderChart = () => {
     const chart = echarts.getInstanceByDom(chartRef.current);
     if (chart) {
       myChart = chart;
@@ -41,7 +41,7 @@ function useChartHook(chartRef, options) {
       myChart = echarts.init(chartRef.current);
     }
     myChart.setOption(options);
-  }
+  };
 
   useEffect(() => {
     renderChart();
