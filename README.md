@@ -2,7 +2,7 @@
 数据可视化-数据报表：基于umi + antd + echart, 使用hooks编写。
 
 ## 准备
-[Umi快速上手](https://umijs.org/zh-CN/docs/getting-started)
+[Umi快速上手](https://umijs.org/zh-CN/docs/getting-started)  
 [echarts](https://echarts.apache.org/zh/index.html)
 
 ## 开始
