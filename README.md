@@ -4,6 +4,9 @@
 ```bash
 // 使用官方工具构建umi项目
 yarn create @umijs/umi-app
+
+// 引入echart
+yarn add echarts
 ```
 
 ## Getting Started

@@ -12,7 +12,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"],
-      "@/components": ["components/index"]
+      "@/components": ["components/index"],
+      "@/hooks": ["hooks/index"]
     },
     "allowSyntheticDefaultImports": true
   },

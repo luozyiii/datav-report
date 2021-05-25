@@ -1,13 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import CommonCard from '../CommonCard';
-
-// import './index.less';
+import { useChartHook } from '@/hooks';
 
 export default function (props) {
   const [orderToday, setOrderToday] = useState(20);
   const [orderLastDay, setOrderLastDay] = useState(10);
+  const chartRef = useRef(null);
 
-  useEffect(() => {}, []);
+  const options = {
+    xAxis: {
+      type: 'category',
+      show: false,
+      boundaryGap: false,
+    },
+    yAxis: {
+      show: false,
+    },
+    series: [
+      {
+        type: 'line',
+        data: [2, 18, 10, 20, 30, 8, 16],
+        areaStyle: {
+          color: 'purple',
+        },
+        lineStyle: {
+          width: 0,
+        },
+        itemStyle: {
+          opacity: 0,
+        },
+        smooth: true,
+      },
+    ],
+    grid: {
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    },
+  };
+  useChartHook(chartRef, options);
 
   const _renderFooter = () => {
     return (
@@ -20,7 +52,7 @@ export default function (props) {
 
   return (
     <CommonCard title="累计订单量" value={orderToday} footer={_renderFooter()}>
-      图表
+      <div style={{ width: '100%', height: '100%' }} ref={chartRef} />
     </CommonCard>
   );
 }
