@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 // 引入 echarts 核心模块，核心模块提供了 echarts 使用必须要的接口。
 import * as echarts from 'echarts/core';
 // 按需引入图表，图表后缀都为 Chart
-import { BarChart, LineChart } from 'echarts/charts';
+import { BarChart, LineChart, CustomChart } from 'echarts/charts';
 // 引入提示框，标题，直角坐标系组件，组件后缀都为 Component
 import {
   TitleComponent,
@@ -24,6 +24,7 @@ echarts.use([
   CanvasRenderer,
   BarChart,
   LineChart,
+  CustomChart,
 ]);
 
 function useChartHook(chartRef, options) {
