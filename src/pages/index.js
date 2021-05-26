@@ -1,4 +1,4 @@
-import { TopView, SalesView, BottomView } from '@/components';
+import { TopView, SalesView, BottomView, MapView } from '@/components';
 
 import './index.less';
 
@@ -8,6 +8,7 @@ export default function IndexPage() {
       <TopView></TopView>
       <SalesView></SalesView>
       <BottomView></BottomView>
+      <MapView></MapView>
     </div>
   );
 }

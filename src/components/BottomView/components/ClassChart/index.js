@@ -3,9 +3,9 @@ import { Card, Radio } from 'antd';
 import { useChartHook } from '@/hooks';
 
 export default function (props) {
-  const chartRef3 = useRef(null);
+  const chartRef = useRef(null);
 
-  const getOptions3 = (data) => {
+  const getOptions = (data) => {
     return {
       title: [
         {
@@ -120,7 +120,7 @@ export default function (props) {
       name: `葡萄 | 60`,
     },
   ];
-  useChartHook(chartRef3, getOptions3(chartData));
+  useChartHook(chartRef, getOptions(chartData));
 
   useEffect(() => {}, []);
 
@@ -141,7 +141,7 @@ export default function (props) {
   return (
     <div className="view">
       <Card title={_renderTitle2()}>
-        <div className="chart-wrapper" ref={chartRef3}></div>
+        <div className="chart-wrapper" ref={chartRef}></div>
       </Card>
     </div>
   );
